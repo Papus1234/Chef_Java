@@ -1,35 +1,35 @@
 package ChefApp;
 
-import Estructuras_Basicas.List;
+import Estructuras_Basicas.Lista;
 
 public class Ingredientes {
-	List frutas,vegetales,granos,lacteos,carnes;
+	Lista<String> frutas,vegetales,granos,lacteos,carnes;
 
 	
 	
 	public Ingredientes(){
-		frutas=new List();
-		granos=new List();
-		vegetales=new List();
-		lacteos=new List();
-		carnes=new List();
+		frutas=new Lista<String>();
+		granos=new Lista<String>();
+		vegetales=new Lista<String>();
+		lacteos=new Lista<String>();
+		carnes=new Lista<String>();
 	}
 	
 	public void Registrar(String ingrediente, String categoria){
 		if (categoria=="frutas"){
-			frutas.insert(ingrediente);
+			frutas.insertar(ingrediente);
 		}
 		else if(categoria=="granos"){
-			granos.insert(ingrediente);
+			granos.insertar(ingrediente);
 		}
 		else if(categoria=="vegetales"){
-			vegetales.insert(ingrediente);
+			vegetales.insertar(ingrediente);
 	    }
 		else if(categoria=="lacteos"){
-			lacteos.insert(ingrediente);
+			lacteos.insertar(ingrediente);
 	    }
 		else if(categoria=="carnes"){
-			carnes.insert(ingrediente);
+			carnes.insertar(ingrediente);
 	    }
 		else{
 			System.err.print("Categoría no válida");

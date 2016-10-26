@@ -7,7 +7,7 @@ public class Prueba {
 		c.Registrar("papaya", "frutas");
 		c.Registrar("manzana", "frutas");
 		c.Registrar("manzana", "frutas");
-		c.frutas.mostrar(c.frutas);
+		c.frutas.mostrar();
 		// TODO Auto-generated method stub
 
 	}
