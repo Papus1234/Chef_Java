@@ -7,7 +7,12 @@ public class Prueba {
 		c.Registrar("papaya", "frutas");
 		c.Registrar("manzana", "frutas");
 		c.Registrar("manzana", "frutas");
-		c.frutas.mostrar();
+		
+		for (int i=0;i<c.frutas.size();i++){
+			
+			System.out.println(c.frutas.get(i).getNombre());
+			
+		}
 		// TODO Auto-generated method stub
 
 	}
