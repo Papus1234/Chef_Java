@@ -72,34 +72,29 @@ public class Ingredientes {
 	}
 	
 	public void Registrar(String ingrediente, String categoria){
-		if (categoria=="frutas"){
-			Ingrediente n= new Ingrediente(ingrediente);
-			frutas.insertarPrimero(n);
-		}
-		else if(categoria=="granos"){
-			Ingrediente n= new Ingrediente(ingrediente);
-			granos.insertarPrimero(n);
-		}
-		else if(categoria=="vegetales"){
-			Ingrediente n= new Ingrediente(ingrediente);
-			vegetales.insertarPrimero(n);
-	    }
-		else if(categoria=="lacteos"){
-			Ingrediente n= new Ingrediente(ingrediente);
-			lacteos.insertarPrimero(n);
-	    }
-		else if(categoria=="carnes"){
-			Ingrediente n= new Ingrediente(ingrediente);
-			carnes.insertarPrimero(n);
-	    }
-		else{
-			System.err.print("Categoria no valida");
-		}
+		Ingrediente c= new Ingrediente(categoria,ingrediente);
+		todos.insertarPrimero(c);
+		
 	}
 	
 	public void acomodar_listas(){
 		for (int i=0; i<todos.cuantosElementos(); i++){
 			
+			if(todos.devolverDato(i).getTipo()=="frutas"){
+				frutas.insertarPrimero(todos.devolverDato(i));
+			}
+			if(todos.devolverDato(i).getTipo()=="vegetales"){
+				vegetales.insertarPrimero(todos.devolverDato(i));
+			}
+			if(todos.devolverDato(i).getTipo()=="lacteos"){
+				lacteos.insertarPrimero(todos.devolverDato(i));
+			}
+			if(todos.devolverDato(i).getTipo()=="granos"){
+				granos.insertarPrimero(todos.devolverDato(i));
+			}
+			if(todos.devolverDato(i).getTipo()=="carnes"){
+				carnes.insertarPrimero(todos.devolverDato(i));
+			}
 		}
 	}
 	

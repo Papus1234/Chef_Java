@@ -6,8 +6,9 @@ public class Platillo {
 	String informacion_nutricional;
 	int precio;
 	int tiempo_de_preparación;
+	Receta receta;
 	
-	
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -57,5 +58,13 @@ public class Platillo {
 		this.tiempo_de_preparación = tiempo_de_preparación;
 	}
 
+	public Receta getReceta() {
+		return receta;
+	}
+
+
+	public void setReceta(Receta receta) {
+		this.receta = receta;
+	}
 
 }
